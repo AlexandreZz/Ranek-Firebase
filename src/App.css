@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+.center {
+  display: block;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+}

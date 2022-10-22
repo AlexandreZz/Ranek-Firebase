@@ -1,0 +1,32 @@
+.header {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.desktop ul {
+  margin: 10px;
+}
+
+.desktop ul li {
+  margin: 10px 5px;
+}
+
+.desktop ul li a {
+  padding: 10px;
+  margin: 10px;
+  background-color: #ffbb12;
+  border: 1px soldi #ffbb12;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #774802;
+  font-variant: all-small-caps;
+  transition: 0.5s;
+}
+
+.desktop ul li a:hover,
+.desktop ul li a:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #fea, 0px 0px 0px 3px #ffbb12;
+}
