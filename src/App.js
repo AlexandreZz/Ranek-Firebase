@@ -8,15 +8,17 @@ import Login from "./components/login/Login";
 import NotFound from "./components/NotFound";
 import Home from "./components/Home";
 import "./App.css";
+import Preloading from "./components/Preloading";
 
 function App() {
   return (
     <section>
       <BrowserRouter>
         <Header />
+        {/* <Preloading /> */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="produto/:id/*" element={<Produtos />} />
+          <Route path="produtos/:id" element={<Produtos />} />
           <Route path="contato" element={<Contato />} />
           <Route path="login/*" element={<Login />} />
           <Route path="*" element={<NotFound />} />
