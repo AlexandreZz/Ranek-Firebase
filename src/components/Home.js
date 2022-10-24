@@ -27,14 +27,14 @@ const Home = () => {
     apiProdutos(`https://ranekapi.origamid.dev/json/api/produto`);
   }, []);
 
-  if (loading)
+  if (loading || dados === null)
     return (
-      <div className={styles.divLoading}>
+      <div className="divLoading animacaoLEFT">
         <img
           src={gifLoading}
           alt="Loading"
           title="Loading"
-          className={styles.loadingGif}
+          className="loadingGif"
         />
         <p>Loading...</p>
       </div>
@@ -42,15 +42,11 @@ const Home = () => {
 
   if (error)
     return (
-      <p>
-        {error}
-      </p>
-    );
-  if (dados === null)
-    return (
-      <p>
-        {error}
-      </p>
+      <div className="center animacaoLEFT">
+        <p className="error">
+          {error}
+        </p>
+      </div>
     );
 
   const returnItemProdutos = item => {
@@ -66,13 +62,12 @@ const Home = () => {
             {item.nome}
           </h2>
         </Link>
-        {console.log(item)}
       </div>
     );
   };
 
   return (
-    <section className={styles.home}>
+    <section className={`${styles.home} animacaoLEFT`}>
       <div className={`${styles.grid} center`}>
         {dados &&
           dados.map(items => {

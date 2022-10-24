@@ -22,31 +22,9 @@
   font-variant: all-small-caps;
 }
 
-.divLoading {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.loadingGif {
-  max-width: 100%;
-  width: 190px;
-  margin: 0 auto;
-  display: inline-block;
-}
-
-.loadingGif:focus,
-.loadingGif:hover {
-  outline: none;
-  box-shadow: inherit;
-}
-
-.divLoading p {
-  font-size: 20px;
-  color: #333;
-  font-weight: bold;
-  display: inline-block;
-  position: relative;
-  top: -85px;
-  left: 40px;
+@media screen and (max-width: 769px) {
+  .grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
