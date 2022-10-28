@@ -1,0 +1,117 @@
+.login {
+  width: 100%;
+  height: 100vh;
+  padding-top: 40px;
+}
+
+.image > img {
+  width: 95%;
+  max-width: auto;
+  height: 100%;
+}
+
+.image {
+  width: 50%;
+}
+
+.overlay {
+  width: 47.5%;
+  height: 100%;
+  background: -webkit-linear-gradient(to top, #ffbb11b8, #ffeeaac2);
+  background: linear-gradient(to top, #ffbb11b8, #ffeeaac2);
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.formulario {
+  width: 45%;
+  margin: 40px 0 0 0;
+  position: relative;
+  border-top: 5px solid #fb1;
+  border-right: 5px solid #fb1;
+}
+
+.botoes {
+  position: absolute;
+  top: -15px;
+  right: -5px;
+}
+
+.botoes > button {
+  width: auto;
+  max-width: 100%;
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 0;
+  z-index: 1;
+}
+
+.botoes > button:hover,
+.botoes > button:focus {
+  outline: none;
+  box-shadow: inherit;
+}
+.botoes > button > img {
+  transition: 1s;
+}
+
+.botoes > button > img:hover,
+.botoes > button > img:focus {
+  outline: none;
+  box-shadow: inherit;
+}
+
+.loginForm,
+.cadastroForm {
+  margin-top: 30px;
+  position: relative;
+  left: 50px;
+}
+
+.loginForm h1,
+.cadastroForm h1 {
+  font-family: "Spectral", Georgia;
+  font-size: 2.1rem;
+  color: #333;
+  position: relative;
+  z-index: 1;
+}
+.loginForm h1::after,
+.cadastroForm h1:after {
+  content: '';
+  width: 25px;
+  height: 25px;
+  background-color: #fb1;
+  position: absolute;
+  bottom: -2px;
+  left: -6px;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 900px) {
+  .image {
+    display: none;
+  }
+
+  .formulario {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    left: 50px;
+  }
+  .login {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .formulario {
+    width: 95%;
+    left: 10px;
+  }
+}
