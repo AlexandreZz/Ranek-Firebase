@@ -1,7 +1,15 @@
 import React from "react";
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <footer
+      style={{
+        backgroundColor: "#fb1",
+        width: "100%",
+        height: "30px"
+      }}
+    />
+  );
 };
 
 export default Footer;
