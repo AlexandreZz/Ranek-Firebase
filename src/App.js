@@ -28,7 +28,7 @@ function App() {
       } else {
         // User is signed out
         setLogado(false);
-        navigator("/login");
+        // navigator("/login");
       }
     });
   }, []);

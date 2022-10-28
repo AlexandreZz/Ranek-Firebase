@@ -91,7 +91,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link to="main" className={styles.main}>
-                    Panel{" "}
+                    Painel{" "}
                     <img
                       style={{ width: "10px", marginLeft: "10px" }}
                       src={foto}
