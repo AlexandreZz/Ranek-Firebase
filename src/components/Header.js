@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "../modules/Header.module.css";
 import gifLoading from "./img/loadingBolha.gif";
 import "./InitialFireBase";
@@ -13,6 +13,7 @@ const Header = () => {
   const [logado, setLogado] = React.useState(false);
   const [error, setError] = React.useState(false);
   const [loading, setLoading] = React.useState(true);
+  const navigator = useNavigate();
 
   React.useEffect(
     () => {
@@ -37,6 +38,7 @@ const Header = () => {
   const handleClick = () => {
     signOut(auth).then(() => {
       setLogado(false);
+      navigator("/login");
     });
   };
 
