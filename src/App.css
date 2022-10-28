@@ -96,6 +96,10 @@ img:focus {
   left: 40px;
 }
 
+.paddingTop {
+  padding-top: 70px;
+}
+
 .animacaoLEFT {
   opacity: 0;
   transform: translateX(-80px);
