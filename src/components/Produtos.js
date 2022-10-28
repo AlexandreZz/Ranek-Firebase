@@ -2,12 +2,16 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import styles from "../modules/Produtos.module.css";
 import gifLoading from "./img/loadingBolha.gif";
+import "./InitialFireBase";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const Produtos = () => {
   const [produto, setProduto] = React.useState();
+  const [logado, setLogado] = React.useState(false);
   const [error, setError] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
   const { id } = useParams();
+  const auth = getAuth();
 
   React.useEffect(
     () => {
@@ -30,10 +34,24 @@ const Produtos = () => {
     [id]
   );
 
+  React.useEffect(() => {
+    onAuthStateChanged(auth, user => {
+      if (user) {
+        setLogado(true);
+      } else {
+        setLogado(false);
+      }
+    });
+  }, []);
+
   const handleClick = () => {
-    setError(
-      "Error: Para comprar este produto faça o login ou crie uma conta."
-    );
+    if (logado === false) {
+      setError(
+        "Error: Para comprar este produto faça o login ou crie uma conta."
+      );
+    } else {
+      setError("Página em desenvolvimento");
+    }
 
     setTimeout(() => {
       setError(false);
@@ -42,7 +60,7 @@ const Produtos = () => {
 
   if (error)
     return (
-      <div className="center animacaoLEFT">
+      <div className="center animacaoLEFT paddingTop">
         <p className="error">
           {error}
         </p>
@@ -51,7 +69,7 @@ const Produtos = () => {
 
   if (loading || produto === null)
     return (
-      <div className="divLoading animacaoLEFT">
+      <div className="divLoading animacaoLEFT paddingTop">
         <img
           src={gifLoading}
           alt="Loading"
