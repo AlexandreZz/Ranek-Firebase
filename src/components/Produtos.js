@@ -34,15 +34,18 @@ const Produtos = () => {
     [id]
   );
 
-  React.useEffect(() => {
-    onAuthStateChanged(auth, user => {
-      if (user) {
-        setLogado(true);
-      } else {
-        setLogado(false);
-      }
-    });
-  }, []);
+  React.useEffect(
+    () => {
+      onAuthStateChanged(auth, user => {
+        if (user) {
+          setLogado(true);
+        } else {
+          setLogado(false);
+        }
+      });
+    },
+    [auth]
+  );
 
   const handleClick = () => {
     if (logado === false) {
@@ -60,7 +63,7 @@ const Produtos = () => {
 
   if (error)
     return (
-      <div className="center animacaoLEFT paddingTop">
+      <div className="center animacaoLEFT paddingTop height100vh">
         <p className="error">
           {error}
         </p>
@@ -69,7 +72,7 @@ const Produtos = () => {
 
   if (loading || produto === null)
     return (
-      <div className="divLoading animacaoLEFT paddingTop">
+      <div className="divLoading animacaoLEFT paddingTop height100vh">
         <img
           src={gifLoading}
           alt="Loading"
