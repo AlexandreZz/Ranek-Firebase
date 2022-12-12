@@ -67,6 +67,31 @@ img:focus {
   box-shadow: 0px 0px 0px 1px #f8d7da, 0px 0px 0px 2px #e4acb0;
 }
 
+.sucess {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 15px 30px;
+  border-radius: 8px;
+  color: #88c18e;
+  background-color: #e6f4e7;
+  border: 1px solid #88c18e;
+  font-size: 12px;
+  text-align: center;
+  text-transform: capitalize;
+  font-variant: all-small-caps;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.6s;
+}
+
+.sucess:hover,
+.sucess:focus {
+  background-color: #88c18e;
+  color: #e6f4e7;
+  box-shadow: 0px 0px 0px 1px #e6f4e7, 0px 0px 0px 2px #4f7052;
+}
+
 .divLoading {
   display: block;
   margin: 0 auto;
@@ -129,6 +154,34 @@ img:focus {
   opacity: 0;
   transform: translateX(-80px);
   animation: animacaoLeft 0.5s ease-in-out forwards;
+}
+
+.height100vh {
+  height: 100vh;
+}
+
+.tituloPadrao {
+  font-family: "Spectral", Georgia;
+  font-size: 2.1rem;
+  color: #333;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.tituloPadrao::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: #fb1;
+  position: absolute;
+  bottom: -2px;
+  left: -6px;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+#newPass {
+  left: 0;
 }
 
 @keyframes animacaoLeft {
