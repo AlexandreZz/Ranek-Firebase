@@ -34,7 +34,7 @@ function App() {
   }, []);
 
   return (
-    <section>
+    <section style={{ position: "relative" }}>
       <Header />
       <Preloading />
       <Routes>
