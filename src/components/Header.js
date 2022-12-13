@@ -60,7 +60,7 @@ const Header = () => {
 
   if (error)
     return (
-      <div className="center animacaoLEFT paddingTop">
+      <div className="center animacaoLEFT paddingTop height100vh">
         <p className="error">
           {error}
         </p>
@@ -97,6 +97,8 @@ const Header = () => {
                     <img
                       style={{ width: "10px", marginLeft: "10px" }}
                       src={foto}
+                      title="UserIcon"
+                      alt="UserIcon"
                     />
                   </Link>
                 </li>
