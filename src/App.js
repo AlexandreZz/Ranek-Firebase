@@ -19,19 +19,22 @@ function App() {
   const [logado, setLogado] = React.useState();
   const navigator = useNavigate();
 
-  React.useEffect(() => {
-    onAuthStateChanged(auth, user => {
-      if (user) {
-        // const uid = user.uid;
-        setLogado(true);
-        navigator("/main");
-      } else {
-        // User is signed out
-        setLogado(false);
-        // navigator("/login");
-      }
-    });
-  }, []);
+  React.useEffect(
+    () => {
+      onAuthStateChanged(auth, user => {
+        if (user) {
+          // const uid = user.uid;
+          setLogado(true);
+          navigator("/main");
+        } else {
+          // User is signed out
+          setLogado(false);
+          // navigator("/login");
+        }
+      });
+    },
+    [navigator]
+  );
 
   return (
     <section style={{ position: "relative" }}>
