@@ -1,13 +1,13 @@
 .login {
   width: 100%;
   height: 100vh;
-  padding-top: 40px;
+  padding: 40px 0;
 }
 
 .image > img {
   width: 95%;
   max-width: auto;
-  height: 100%;
+  height: 90vh;
 }
 
 .image {
@@ -25,7 +25,7 @@
   left: 0;
 }
 .formulario {
-  width: 45%;
+  width: 100%;
   margin: 40px 0 0 0;
   position: relative;
   border-top: 5px solid #fb1;
@@ -34,7 +34,7 @@
 
 .botoes {
   position: absolute;
-  top: -15px;
+  top: -10px;
   right: -5px;
 }
 
@@ -71,25 +71,11 @@
   left: 50px;
 }
 
-.loginForm h1,
-.cadastroForm h1 {
-  font-family: "Spectral", Georgia;
-  font-size: 2.1rem;
-  color: #333;
-  position: relative;
-  z-index: 1;
-}
-.loginForm h1::after,
-.cadastroForm h1:after {
-  content: '';
-  width: 25px;
-  height: 25px;
-  background-color: #fb1;
-  position: absolute;
-  bottom: -2px;
-  left: -6px;
-  z-index: -1;
-  border-radius: 4px;
+.perdeuSenha {
+  display: inline-block;
+  margin: 30px 0 20px 0;
+  color: #676767;
+  border-bottom: 3px solid #676767;
 }
 
 @media screen and (max-width: 900px) {
@@ -107,11 +93,29 @@
     align-items: center;
     justify-content: center;
   }
+
+  .sectionForm {
+    width: 80% !important;
+    margin: 0 auto;
+    display: block;
+  }
+  .cadastroForm,
+  .loginForm {
+    display: block;
+    margin: 40px auto 0 auto;
+    width: 99%;
+    left: 0;
+    position: relative;
+    text-align: center;
+  }
+  .formulario {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .formulario {
-    width: 95%;
+    width: 100%;
     left: 10px;
   }
 }
