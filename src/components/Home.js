@@ -29,7 +29,7 @@ const Home = () => {
 
   if (loading || dados === null)
     return (
-      <div className="divLoading animacaoLEFT paddingTop">
+      <div className="divLoading animacaoLEFT paddingTop height100vh">
         <img
           src={gifLoading}
           alt="Loading"
@@ -42,7 +42,7 @@ const Home = () => {
 
   if (error)
     return (
-      <div className="center animacaoLEFT paddingTop">
+      <div className="center animacaoLEFT paddingTop height100vh">
         <p className="error">
           {error}
         </p>
