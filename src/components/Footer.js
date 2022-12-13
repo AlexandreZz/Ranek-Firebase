@@ -6,7 +6,9 @@ const Footer = () => {
       style={{
         backgroundColor: "#fb1",
         width: "100%",
-        height: "30px"
+        height: "30px",
+        position: "absolute",
+        bottom: "0"
       }}
     />
   );
