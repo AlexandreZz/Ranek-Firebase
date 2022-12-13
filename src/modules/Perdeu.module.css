@@ -1,0 +1,9 @@
+.perdeuPass {
+  display: block;
+  padding: 60px 20px;
+}
+@media screen and (max-width: 900px) {
+  .perdeuPass {
+    text-align: center;
+  }
+}
